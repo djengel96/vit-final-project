@@ -1,0 +1,48 @@
+#container {
+   max-width: 800px;
+   border: 2px solid black;
+   min-height: 600px;
+   margin: 0 auto;
+}
+#header {
+   
+}
+.heading {
+   text-align: center;
+}
+#skillEntry {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+#skillEntry button {
+   padding: 8px 12px;
+}
+#skillsBank {
+   min-width: 90%;
+   min-height: 60px;
+   border: 2px solid grey;
+   margin: 10px;
+   padding-bottom: 20px;
+}
+#skillsBank h3 {
+   text-align: center;
+   margin-top: 5px;
+}
+span {
+   padding: 5px;
+   margin: 0 2px;
+   border: 1px solid green;
+}
+.skills {
+
+}
+#skillsList {
+   min-width: 90%;
+   min-height: 60px;
+   border: 2px solid grey;
+   margin: 10px;
+}
+#skillsList h3 {
+   text-align: center;
+   margin-top: 5px;
+}
