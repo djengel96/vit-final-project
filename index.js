@@ -2,14 +2,23 @@ var $ = function (selector) {
    return document.querySelector(selector);
 }
 
+document.querySelector('#skillInput').addEventListener('keypress', function (e) {
+   if (e.keyCode === 13) {
+     addToBank()
+   }
+});
+
 function addToBank() {
-   var skillInput = $('#skillInput').value;
-   var span = document.createElement('span');
-   var skill = document.createTextNode(skillInput);
-   span.appendChild(skill)
-   span.onclick = addToList;
-   document.getElementById('skillsBank').appendChild(span)
-   
+   if ($('#skillInput').value === '') {
+      alert('you must type something')
+   } else {
+      var skillInput = $('#skillInput').value;
+      var span = document.createElement('span');
+      var skill = document.createTextNode(skillInput);
+      span.appendChild(skill)
+      span.onclick = addToList;
+      document.getElementById('skillsBank').appendChild(span);
+      document.getElementById('skillInput').value = ''}
 }
 
 function addToList() {
@@ -17,6 +26,7 @@ function addToList() {
    var text = this.innerText;
    var span = document.createElement('span');
    var skill = document.createTextNode(text);
+   console.log(skill)
    span.appendChild(skill);
    document.getElementById('skillsList').appendChild(span)
 }
