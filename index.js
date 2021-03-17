@@ -22,41 +22,18 @@ function addToBank() {
 }
 
 function addToList() {
-   console.log(this.innerText)
-   var text = this.innerText;
-   var span = document.createElement('span');
-   var skill = document.createTextNode(text);
-   console.log(skill)
-   span.appendChild(skill);
-   document.getElementById('skillsList').appendChild(span)
+   var paragraph = document.getElementById('paragraph')
+   var text = document.createTextNode(this.innerText)
+   if (paragraph.innerText === "") {
+      paragraph.appendChild(text)
+   } else {
+      var comma = document.createTextNode(', ')
+      paragraph.appendChild(comma)
+      paragraph.appendChild(text)
+   }
 }
 
-// for (var i = 0; i < newSkill.length; i++) {
-//    var skill = newSkill[i];
-//    skill.onclick = addToBank
-// }
-
-
-// function addToBank() {
-//    var skillInput = document.getElementById("skillInput").value
-//    var newSkill = document.createElement("span");
-//    newSkill.innerText = skillInput;
-  
-//    var skillsBank = document.getElementById("skillsBank");
-//    skillsBank.appendChild(newSkill)
-//    var spanList = document.getElementsByTagName("span")[0]
-//    for (var i = 0; i < spanList.length; i++) {
-//       console.log(spanlist)
-//    }
-//    spanList.onclick = addToList
-//    }
-
-// function addToList() {
-//    // console.log(e)
-//    var text = this.innerText;
-//    var skill = document.createElement("span");
-//    skill.innerText = text
-//    var skillsList = document.getElementById("skillsList");
-//    skillsList.appendChild(skill)
-
-// }
+function clearList() {
+   console.log('yerp')
+   $('#skillsList').innerText = ''
+}
