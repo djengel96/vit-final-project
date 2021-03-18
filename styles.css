@@ -1,14 +1,39 @@
 #container {
    max-width: 800px;
-   border: 2px solid black;
+   border: 4px solid #cdc733;
    min-height: 600px;
    margin: 0 auto;
+   border-radius: 12px;
+   background: #E6C292;
+background: -moz-linear-gradient(top, #E6C292 0%, #FFD6A2 100%);
+background: -webkit-linear-gradient(top, #E6C292 0%, #FFD6A2 100%);
+background: linear-gradient(to bottom, #E6C292 0%, #FFD6A2 100%);
+}
+h3 {
+   font-family: 'Montserrat', sans-serif;
+}
+button {
+   border-radius: 10px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   border: 2px solid #cdc733;
+   background-color: #966c3b;
+   color: #fff;
+   letter-spacing: 1.5px;
+}
+input {
+   height: 30px;
+   font-size: 20px;
+   border-radius: 12px;
 }
 #header {
    
 }
 .heading {
    text-align: center;
+   font-family: 'Recursive', sans-serif;
+   font-size: 60px;
+   margin-bottom: 10px;
 }
 #skillEntry {
    padding-left: 10px;
@@ -23,14 +48,17 @@
    border: 2px solid grey;
    margin: 10px;
    padding-bottom: 20px;
+   border-radius: 15px;
+   background-color: #ffe6ca;
 }
 #skillsBank h3 {
    text-align: center;
    margin-top: 5px;
 }
 span {
+   display: inline-block;
    padding: 5px;
-   margin: 0 2px;
+   margin: 2px;
    border: 1px solid green;
 }
 .skills {
@@ -41,8 +69,16 @@ span {
    min-height: 60px;
    border: 2px solid grey;
    margin: 10px;
+   padding-bottom: 20px;
+   border-radius: 15px;
+   background-color: #ffe6ca;
 }
 #skillsList h3 {
    text-align: center;
    margin-top: 5px;
 }
+
+/* yellow #cdc733
+brown #966c3b
+light brown #d0af84
+tan #ffe6ca */

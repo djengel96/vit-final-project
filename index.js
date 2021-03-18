@@ -22,6 +22,7 @@ function addToBank() {
 }
 
 function addToList() {
+   
    var paragraph = document.getElementById('paragraph')
    var text = document.createTextNode(this.innerText)
    if (paragraph.innerText === "") {
@@ -31,9 +32,31 @@ function addToList() {
       paragraph.appendChild(comma)
       paragraph.appendChild(text)
    }
+   test()
 }
 
 function clearList() {
-   console.log('yerp')
-   $('#skillsList').innerText = ''
+   $('#paragraph').innerText = ""
 }
+
+
+
+function test() {
+   var skillsBank = $('#skillsBank').innerHTML;
+   localStorage.setItem("saveSkills", skillsBank)
+   
+   var paragraph = $('#paragraph').innerText;
+   localStorage.setItem("saveData", paragraph);
+
+}
+
+// -----------keeps the data even when refreshed------------
+   
+// window.addEventListener('load', (event) => {
+//    console.log('page is fully loaded')
+//    $('#paragraph').innerText = localStorage.getItem('saveData')
+// })
+// window.addEventListener('load', (event) => {
+//    $('#skillsBank').innerHTML = localStorage.getItem('saveSkills')
+// })
+//---------------------------------------------------------
